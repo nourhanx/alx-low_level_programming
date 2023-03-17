@@ -7,3 +7,6 @@ solutions to C-variables,if else and while tasks
 4- prints the alphabet in lowercase except 'q'and 'e'.
 5- prints all single digit numbers of base 10 starting from 0.
 6- same as 5 but with limitations.
+7- prints the lowercase alphabet in reverse.
+8- prints all the numbers of base 16 in lowercase.
+9- prints all possible combinations of single-digit numbers.
