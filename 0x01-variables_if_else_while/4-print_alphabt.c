@@ -16,8 +16,11 @@ int main(void)
 		{
 			continue;
 		}
-		putchar(ch);
-		ch++;
+		else
+		{
+			putchar(ch);
+			ch++;
+		}
 	}
 	putchar('\n');
 	return (0);
