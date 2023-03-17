@@ -5,3 +5,5 @@ solutions to C-variables,if else and while tasks
 2- prints the alphabet in lowercase.
 3- prints the alphabet in lowercase, and then in uppercase.
 4- prints the alphabet in lowercase except 'q'and 'e'.
+5- prints all single digit numbers of base 10 starting from 0.
+6- same as 5 but with limitations.
