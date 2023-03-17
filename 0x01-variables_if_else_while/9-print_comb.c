@@ -10,7 +10,7 @@ int main(void)
 {
 	int ch  = '0';
 
-	while (ch <= 9)
+	while (ch <= '9')
 	{
 		putchar(ch);
 		if (ch != '9')
