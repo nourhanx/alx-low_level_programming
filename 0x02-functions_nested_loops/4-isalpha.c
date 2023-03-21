@@ -11,7 +11,7 @@
 
 int _isalpha(int c)
 {
-	if (_islower(c))
+	if (c <= 'z' && c >= 'a')
 	{
 		return (1);
 	}
