@@ -8,10 +8,12 @@
 void times_table(void)
 {
 	int x;
+	int i;
+	int j;
 
-	for (int i = 0; i < 10; i++)
+	for (i = 0; i < 10; i++)
 	{
-		for (int j = 0; j < 10; j++)
+		for (j = 0; j < 10; j++)
 		{
 			x = i * j;
 			printf("%d, ", x);
