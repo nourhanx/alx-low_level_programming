@@ -9,23 +9,36 @@
 
 void jack_bauer(void)
 {
-	int min = 0;
-	int hr = 0;
+	int i;
+	int min;
+	int hr;
 
-	while (hr < 24)
+	for (i = 0; i < 1440; i++)
 	{
-		min=0;
-
-		while (min < 60)
+		min = i % 60;
+		hr = i / 60;
+		if (min < 10)
 		{
-			_putchar((hr / 10) + '0');
-			_putchar((hr % 10) + '0');
-			putchar(':');
-			_putchar((min / 10) + '0');
-			_putchar((min % 10) + '0');
-			putchar('\n');
-			min++;
+			if (hr < 10)
+			{
+				printf("0%d:0%d", hr, min);
+			}
+			else
+			{
+				printf("%d:0%d", hr, min);
+			}
 		}
-		hr++;
+		else
+		{
+			if (hr < 10)
+			{
+				printf("0%d:%d", hr, min);
+			}
+			else
+			{
+				printf("%d:%d", hr, min);
+			}
+		}
+		putchar('\n');
 	}
 }
