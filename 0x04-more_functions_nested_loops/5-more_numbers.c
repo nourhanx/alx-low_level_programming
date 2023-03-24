@@ -12,9 +12,9 @@ void more_numbers(void)
 
 	while (count < 10)
 	{
-		for (i = 48; i < 63; i++)
+		for (i = 0; i < 15; i++)
 		{
-			putchar(i);
+			printf("%d", i);
 		}
 		putchar('\n');
 		count++;
