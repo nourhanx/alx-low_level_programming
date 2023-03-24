@@ -10,12 +10,13 @@ void more_numbers(void)
 	int count = 0;
 	int i;
 
-	while (count < 20)
+	while (count < 10)
 	{
 		for (i = 48; i < 63; i++)
 		{
 			putchar(i);
 		}
 		putchar('\n');
+		count++;
 	}
 }
