@@ -48,20 +48,16 @@ int _atoi(char *s)
 }
 
 /**
- * _isalpha - checks if c is from the alphabet
+ * _isdigit - checks for a digit
  *
- * @c: single character
+ * @c: integer
  *
- * Return: 1 if c is alphabet 0 otherwise
+ * Return: 1 if c is a digit 0 otherwise
  */
 
-int _isalpha(int c)
+int _isdigit(int c)
 {
-	if (c <= 'z' && c >= 'a')
-	{
-		return (1);
-	}
-	else if (c <= 'Z' && c >= 'A')
+	if (c > 47  && c < 58)
 	{
 		return (1);
 	}
@@ -95,7 +91,7 @@ int main(int argc, char *argv[])
 		}
 		for (j = 0; j < len; j++)
 		{
-			if (!_isalpha(argv[i][j]))
+			if (!_isdigit(argv[i][j])) 
 			{
 				printf("Error\n");
 				return (1);
@@ -103,5 +99,6 @@ int main(int argc, char *argv[])
 		}
 		sum += _atoi(argv[i]);
 	}
+	printf("%d\n", sum);
 	return (0);
 }
