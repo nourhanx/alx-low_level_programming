@@ -9,5 +9,7 @@
 int main(int argc, char *argv[])
 {
 	printf("argv[0]\n");
+	(void)argc;
+	(void)argv;
 	return (0);
 }
