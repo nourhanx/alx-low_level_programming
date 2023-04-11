@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include "main.h"
+#include <stdio.h>
 
 /**
  * _atoi - converts a string to an integer
@@ -7,6 +7,7 @@
  *
  * Return: the int converted from the string
  */
+
 int _atoi(char *s)
 {
 	int i, d, n, len, f, digit;
@@ -47,39 +48,57 @@ int _atoi(char *s)
 }
 
 /**
- * main - adds two positive number
- * @argc: number of arguments
- * @argv: array of arguents
+ * _isdigit - checks for a digit
  *
- * Return: 0 (Success), or 1 (Success)
+ * @c: integer
+ *
+ * Return: 1 if c is a digit 0 otherwise
  */
+
+int _isdigit(int c)
+{
+	if (c > 47  && c < 58)
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
+}
+
+/**
+ * main - prints sum of positive numbers
+ *
+ * @argc: number of arguments
+ * @argv: array of arguments
+ *
+ * Return: 1 if numbers aren't positive, 0 otherwise
+ */
+
 int main(int argc, char *argv[])
 {
-	int sum, num, i, j, k;
+	int i;
+	int j;
+	int len = 0;
+	int sum = 0;
 
-	sum = 0;
-
-	for (i = 1; i < argc; i++)
+	for (i = 0; i < argc; i++)
 	{
-		for (j = 0; argv[i][j] != '\0'; j++)
+		while (argv[i][len] != '\0')
 		{
-			if (argv[i][j] > '9' || argv[i][j] < '0')
+			len++;
+		}
+		for (j = 0; j < len; j++)
+		{
+			if (!(_isdigit(argv[i][j]))) 
 			{
-				puts("Error");
+				printf("Error\n");
 				return (1);
 			}
 		}
+		sum += _atoi(argv[i]);
 	}
-
-	for (k = 1; k < argc; k++)
-	{
-		num = _atoi(argv[k]);
-		if (num >= 0)
-		{
-			sum += num;
-		}
-	}
-
 	printf("%d\n", sum);
 	return (0);
 }
