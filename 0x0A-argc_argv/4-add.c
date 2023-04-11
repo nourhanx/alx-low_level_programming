@@ -91,7 +91,7 @@ int main(int argc, char *argv[])
 		}
 		for (j = 0; j < len; j++)
 		{
-			if (!_isdigit(argv[i][j])) 
+			if (!(_isdigit(argv[i][j]))) 
 			{
 				printf("Error\n");
 				return (1);
