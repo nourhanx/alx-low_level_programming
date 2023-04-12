@@ -15,8 +15,18 @@ char *create_array(unsigned int size, char c)
 	char *arr;
 	unsigned int i;
 
-	arr = malloc(sizeof(char) * size);
+	if (size <= 0)
+	{
+		_putchar("failed to allocate memory");
+		_putchar("\n");
+	}
 
+
+	arr = malloc(sizeof(char) * size);
+	if (arr == NULL)
+	{
+		_putchar("failed to allocate memory\n")
+	}
 	for (i = 0 ; i < size ; i++)
 	{
 		arr[i] = c;
