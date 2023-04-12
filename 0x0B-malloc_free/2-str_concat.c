@@ -53,7 +53,7 @@ int get_length(char *str)
 {
 	int length = 0;
 
-	while (str[length] != '\0')
+	while (str[length] && str)
 	{
 		length++;
 	}
