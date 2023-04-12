@@ -17,15 +17,14 @@ char *create_array(unsigned int size, char c)
 
 	if (size <= 0)
 	{
-		_putchar("failed to allocate memory");
-		_putchar("\n");
+		return (NULL);
 	}
 
 
 	arr = malloc(sizeof(char) * size);
 	if (arr == NULL)
 	{
-		_putchar("failed to allocate memory\n");
+		return (NULL);
 	}
 	for (i = 0 ; i < size ; i++)
 	{
