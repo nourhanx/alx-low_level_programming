@@ -9,6 +9,7 @@ void free_grid(int **grid, int height);
 char *argstostr(int ac, char **av);
 char **strtow(char *str);
 char _putchar(char *c);
+int get_length(char *str);
 void simple_print_buffer(char *buffer, unsigned int size);
 
 #endif
