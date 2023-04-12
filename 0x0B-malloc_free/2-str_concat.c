@@ -2,12 +2,12 @@
 #include <stdlib.h>
 
 /**
- * str_concat - 
+ * str_concat - adds two strings
  *
- * @s1: 
- * @s2: 
+ * @s1: first string
+ * @s2: second string
  *
- * Return: 
+ * Return: new string
  */
 
 char *str_concat(char *s1, char *s2)
@@ -18,11 +18,6 @@ char *str_concat(char *s1, char *s2)
 	int len2;
 	int count = 0;
 	int full_length;
-
-	if (s1 == NULL || s2 == NULL)
-	{
-		return (NULL);
-	}
 
 	len1 = get_length(s1);
 	len2 = get_length(s2);
@@ -57,6 +52,7 @@ char *str_concat(char *s1, char *s2)
 int get_length(char *str)
 {
 	int length = 0;
+
 	while (str[length] != '\0')
 	{
 		length++;
