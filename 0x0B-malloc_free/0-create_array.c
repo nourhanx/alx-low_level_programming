@@ -25,7 +25,7 @@ char *create_array(unsigned int size, char c)
 	arr = malloc(sizeof(char) * size);
 	if (arr == NULL)
 	{
-		_putchar("failed to allocate memory\n")
+		_putchar("failed to allocate memory\n");
 	}
 	for (i = 0 ; i < size ; i++)
 	{
