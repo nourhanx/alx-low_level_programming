@@ -7,7 +7,7 @@
  * @width: width of array
  * @height: height of array
  *
- * @return: pointer to the array
+ * Return: pointer to the array, or NULL if malloc fails
  */
 
 int **alloc_grid(int width, int height)
@@ -22,7 +22,8 @@ int **alloc_grid(int width, int height)
 	arr = malloc(sizeof(int *) * height);
 	for (i = 0; i < height; i++)
 		arr[i] = malloc(sizeof(int) * width);
-	
+	if (arr == NULL)
+		return (NULL);
 	for (i = 0; i < height; i++)
 	{
 		for (j = 0; j < width ; j++)
