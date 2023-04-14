@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * string_nconcat - adds a certain number of bytes from a string 
+ * string_nconcat - adds a certain number of bytes from a string
  * to another
  *
  * @s1: first string
@@ -14,8 +14,7 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int len1 = 0;
-	int len2 = 0;
+	unsigned int len1 = 0, len2 = 0, full_length, i, count = 0;
 	char *new;
 
 	if (s1 == NULL)
@@ -37,12 +36,22 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		while (s2[len2] != '\0')
 			len2++;
+		if (len2 > n)
+			len2 = n;
 	}
 	full_length = len1 + len2;
-
-	new = malloc ((full_length * sizeof(char)) + 1);
+	new = malloc((full_length * sizeof(char)) + 1);
 	if (new == NULL)
 		return (NULL);
+	for (i = 0 ; i < len1 ; i++)
+	{
+		new[count]  = s1[i];
+		count++;
+	}
+	for (i = 0 ; i < len2 ; i++)
+	{
+		new[count] = s2[i];
+		count++;
+	}
 	return (new);
-
-	//WILL STILL UPDATE IT TO ADD ONLY N BYTES OF S2
+}
