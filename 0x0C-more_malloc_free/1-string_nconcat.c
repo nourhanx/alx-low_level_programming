@@ -8,7 +8,7 @@
  * @s2: second string
  * @n: number of bytes from s2 to be added
  *
- * Returns: pointer two new string
+ * Return: pointer two new string
  * if malloc fails returns (NULL)
  */
 
