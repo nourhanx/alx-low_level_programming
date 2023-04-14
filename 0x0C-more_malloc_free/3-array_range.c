@@ -11,7 +11,7 @@
 
 int *array_range(int min, int max)
 {
-	int *a, i, size, count;
+	int *a, i, size, count = 0;
 	if (min > max)
 		return (NULL);
 	size = max - min + 1;
@@ -22,6 +22,8 @@ int *array_range(int min, int max)
 	{
 		a[count] = i;
 		count++;
+		if (count == size)
+			break;
 	}
 	return (a);
 }
