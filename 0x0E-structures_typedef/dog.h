@@ -2,6 +2,8 @@
 #define FILE_MAIN
 
 #include <stdlib.h>
+#include <stdio.h>
+
 /**
  * struct dog - represents a dog
  *
