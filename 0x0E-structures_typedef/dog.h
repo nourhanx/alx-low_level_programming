@@ -2,8 +2,17 @@
 #define FILE_MAIN
 
 #include <stdio.h>
+/**
+ * struct dog - represents a dog
+ *
+ * @name: name of the dog
+ * @age: age of the dog in years
+ * @owner: the dog's owner name
+ *
+ * Descripton: just a dog
+ */
 
-Struct dog
+struct dog
 {
 	char *name;
 	float age;
