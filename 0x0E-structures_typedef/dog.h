@@ -1,7 +1,7 @@
 #ifndef FILE_MAIN
 #define FILE_MAIN
 
-#include <stdio.h>
+#include <stdlib.h>
 /**
  * struct dog - represents a dog
  *
