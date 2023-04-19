@@ -15,9 +15,8 @@ int main(int argc, char **argv)
 	int num2 = atoi(argv[3]);
 	char *op = argv[2];
 	int (*f)(int, int);
-	(void)argc;
 
-	if (op[3] != '\0')
+	if (argc != 4)
 		printf("Error");
 
 	if ((*op == '/' || *op == '%') && num2 == 0)
