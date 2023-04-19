@@ -4,7 +4,7 @@
 /**
  * get_op_func - selects operation from user input
  *
- * @s: char from user 
+ * @s: char from user
  *
  * Return: pointer to function of the operation to be carried out
  */
