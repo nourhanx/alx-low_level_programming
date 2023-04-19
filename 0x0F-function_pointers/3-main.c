@@ -18,20 +18,20 @@ int main(int argc, char **argv)
 
 	if (argc != 4)
 	{
-		printf("Error");
+		printf("Error\n");
 		exit(98);
 	}
 
 	if ((*op == '/' || *op == '%') && num2 == 0)
 	{
-		printf("Error");
+		printf("Error\n");
 		exit(98);
 	}
 
 	f = get_op_func(op);
 	if (!f)
 	{
-		printf("Error");
+		printf("Error\n");
 		exit(98);
 	}
 
