@@ -1,7 +1,7 @@
 #include "function_pointers.h"
 
 /**
- * int_index - searches for an integer 
+ * int_index - searches for an integer
  * based on a certain compare function
  *
  * @array: ponter to an array of type int
