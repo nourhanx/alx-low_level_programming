@@ -20,7 +20,7 @@ int main(int argc, char **argv)
 	if (op[3] != '\0')
 		printf("Error");
 
-	if ((op == '/' || op == '%') && num2 == 0)
+	if ((*op == '/' || *op == '%') && num2 == 0)
 		printf("Error");
 
 	f = get_op_func(op);
