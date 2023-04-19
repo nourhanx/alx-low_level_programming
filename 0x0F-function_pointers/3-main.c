@@ -14,6 +14,7 @@ int main(int argc, char **argv)
 	int num1 = atoi(argv[1]);
 	int num2 = atoi(argv[3]);
 	int (*f)(int, int) = get_op_func(argv[2]);
+	(void)argc;
 
 	printf("%d", f(num1, num2));
 	return (0);
