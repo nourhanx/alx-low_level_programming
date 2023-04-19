@@ -17,14 +17,23 @@ int main(int argc, char **argv)
 	int (*f)(int, int);
 
 	if (argc != 4)
+	{
 		printf("Error");
+		exit(98);
+	}
 
 	if ((*op == '/' || *op == '%') && num2 == 0)
+	{
 		printf("Error");
+		exit(98);
+	}
 
 	f = get_op_func(op);
 	if (!f)
+	{
 		printf("Error");
+		exit(98);
+	}
 
 	printf("%d\n", f(num1, num2));
 	return (0);
