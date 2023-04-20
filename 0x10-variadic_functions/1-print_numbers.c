@@ -19,7 +19,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		separator = "";
 
 	if (n == 0)
+	{
+		printf("\n");
 		return;
+	}
 
 	for (i = 0; i < n - 1; i++)
 	{
