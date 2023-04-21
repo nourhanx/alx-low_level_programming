@@ -10,7 +10,8 @@ void print_all(const char * const format, ...)
 {
 	va_list list;
 	int i = 0;
-	char *separator = "", *s;
+	char *separator = "";
+	char *s;
 
 	va_start(list, format);
 
@@ -18,8 +19,6 @@ void print_all(const char * const format, ...)
 	{
 		while (format[i])
 		{
-			if (!format[i + 1])
-				separator = "\n";
 			switch (format[i])
 			{
 			case 'c':
