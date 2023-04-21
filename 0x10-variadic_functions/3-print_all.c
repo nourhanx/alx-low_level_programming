@@ -45,7 +45,6 @@ void print_all(const char * const format, ...)
 				continue;
 			}
 			separator = ", ";
-			i++;
 		}
 		printf("\n");
 		va_end(list);
