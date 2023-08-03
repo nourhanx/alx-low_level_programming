@@ -16,12 +16,12 @@ void print_binary(unsigned long int n)
 	bits = sizeof(unsigned long int) * 8;
 	highestBit = 1 << (bits - 1);
 
-	while (!highestBit && n)
+	while (!(highestBit && n))
 		highestBit >>= 1;
 
 	while (highestBit)
 	{
-		_putchar(n & highestBit);
+		_putchar((n & highestBit) ? '1' : '0');
 		highestBit >>= 1;
 	}
 }
