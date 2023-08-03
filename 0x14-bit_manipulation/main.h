@@ -9,13 +9,5 @@ int get_bit(unsigned long int n, unsigned int index);
 int set_bit(unsigned long int *n, unsigned int index);
 int clear_bit(unsigned long int *n, unsigned int index);
 unsigned int flip_bits(unsigned long int n, unsigned long int m);
-int power(int n, int m)
-{
-	int result = 1, i =0;
-
-	for (i = 0; i < m; i++)
-		result += n;
-	return (result);
-}
 
 #endif

@@ -12,27 +12,21 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	int i = 0, size = 0;
 	unsigned int n = 0;
 
-	if (!b)
+	if (b == NULL)
 	{
 		return (0);
 	}
 
-	while (b)
+	while (*b != '\0')
 	{
-		size++;
+		if (*b != '0' && *b != '1')
+			return (0);
+
+		n = (n << 1) + (*b - '0');
+		b++;
 	}
 
-	for (i = 0; i < size; i++)
-	{
-		if (b[i] != '0' || b[i] != '1')
-		{
-			return (0);
-		}
-		n += power(b[i], size);
-		size--;
-	}
 	return (n);
 }
